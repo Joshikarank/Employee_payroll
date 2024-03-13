@@ -1,39 +1,36 @@
-function validateInput() {
-    var nameInput = document.getElementById('name');
-    var nameError = document.getElementById('nameError');
-    var regex = /^.{3,}$/;
+$(document).ready(function() {
+    $('#submit').on('click', function() {
+        var dataArray = [];
+        var name = $('#name').val();
+        var selectedProfile = $('input[name="profile"]:checked').val();
+        var sal = $('#salary').val();
+        var genderValue = $('input[name="gender"]:checked').val();
+        var checkedBoxes = $('input[name="dept"]:checked');
+        checkedBoxes.each(function() {
+            dataArray.push($(this).attr('id'));
+        });
+        var dates = $('#date').val();
+        var notesVal = $('#notes').val();
 
-    if (!regex.test(nameInput.value)) {
-        nameError.textContent = 'Enter proper name';
-    } else {
-        nameError.textContent = '';
-    }
-}
+        dataArray.push(name);
+        dataArray.push(sal);
+        dataArray.push(selectedProfile);
+        dataArray.push(genderValue);
+        dataArray.push(dates);
+        dataArray.push(notesVal);
 
-document.getElementById("submit").addEventListener("click", function() {
-    var dataArray = [];
-    var name = document.getElementById("name").value;
-    var selectedProfile = document.querySelector('input[name="profile"]:checked')?.value;
-    var sal = document.getElementById("salary").value;
-    var genderValue = document.querySelector('input[name="gender"]:checked')?.value;
-    // var selectedDepartments = [];
-    var checkedBoxes = document.querySelectorAll('input[name="dept"]:checked');
-    checkedBoxes.forEach(function(checkbox) {
-        dataArray.push(checkbox.id); 
+        console.log(dataArray);
+        // You can perform further actions with the dataArray here, like sending it to a server via AJAX
     });
-    var dates = document.getElementById("date").value;
 
-    var notesVal = document.getElementById("notes").value;
-
-    dataArray.push(name);
-    dataArray.push(sal);
-    dataArray.push(selectedProfile);
-    dataArray.push(genderValue);
-    dataArray.push(dates);
-    dataArray.push(notesVal);
-
-
-    console.log(dataArray); 
+    $('#name').on('input', function() {
+        var nameInput = $(this).val();
+        var regex = /^.{3,}$/;
+        var nameError = $('#nameError');
+        if (!regex.test(nameInput)) {
+            nameError.text('Enter proper name');
+        } else {
+            nameError.text('');
+        }
+    });
 });
-
-console.log("hofe");
