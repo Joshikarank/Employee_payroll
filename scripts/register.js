@@ -1,27 +1,43 @@
 $(document).ready(function() {
     $('#submit').on('click', function() {
-        var dataArray = [];
+        var deptArray = [];
         var name = $('#name').val();
         var selectedProfile = $('input[name="profile"]:checked').val();
         var sal = $('#salary').val();
         var genderValue = $('input[name="gender"]:checked').val();
         var checkedBoxes = $('input[name="dept"]:checked');
+        
         checkedBoxes.each(function() {
-            dataArray.push($(this).attr('id'));
+            deptArray.push($(this).attr('id'));
         });
+        
         var dates = $('#date').val();
         var notesVal = $('#notes').val();
 
-        dataArray.push(name);
-        dataArray.push(sal);
-        dataArray.push(selectedProfile);
-        dataArray.push(genderValue);
-        dataArray.push(dates);
-        dataArray.push(notesVal);
+        var datasobject = {
+            username: name,
+            profile: selectedProfile,
+            salary: sal,
+            gender: genderValue,
+            department: deptArray,
+            date: dates,
+            notes: notesVal
+        };
 
-        console.log(dataArray);
-        // You can perform further actions with the dataArray here, like sending it to a server via AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/user',
+            data: JSON.stringify(datasobject),
+            contentType: 'application/json',
+            success: function(response) {
+                console.log('Data successfully stored on server:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error storing data:', error);
+            }
+        });
     });
+
 
     $('#name').on('input', function() {
         var nameInput = $(this).val();
