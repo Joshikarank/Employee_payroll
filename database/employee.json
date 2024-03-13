@@ -1,0 +1,27 @@
+{
+  "user": [
+    {
+      "username": "name",
+      "profile": "selectedProfile",
+      "salary": "sal",
+      "gender": "genderValue",
+      "department": "deptArray",
+      "date": "dates",
+      "notes": "notesVal",
+      "id": "b226"
+    },
+    {
+      "id": "0730",
+      "username": "joshi",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaVKbSa1QadC1GsXFwQML4kK6JxihiQ4_2n602HKUnQ&s",
+      "salary": "60k",
+      "gender": "male",
+      "department": [
+        "HR",
+        "Engineer"
+      ],
+      "date": "2024-04-01",
+      "notes": "ssffefef"
+    }
+  ]
+}
