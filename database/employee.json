@@ -1,3 +1,29 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "fa13",
+      "username": "wdewd",
+      "profile": "https://i.ibb.co/C0JRMVm/CJ.jpg",
+      "salary": "40k",
+      "gender": "male",
+      "department": [
+        "HR"
+      ],
+      "date": "2024-02-26",
+      "notes": "wdwedwe"
+    },
+    {
+      "username": "deepak",
+      "profile": "https://i.ibb.co/1dFhnfn/frog.png",
+      "gender": "male",
+      "department": [
+        "Finance",
+        "Engineer"
+      ],
+      "salary": "60k",
+      "date": "2024-03-20",
+      "notes": "nothing ",
+      "id": "c0d1"
+    }
+  ]
 }

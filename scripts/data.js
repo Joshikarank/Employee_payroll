@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${user.date}</td>
             <td>${user.notes}</td>
             <td>
-                <button class="edits"><i class="fa-solid fa-pen"></i></button>
+                <a href="register.html?id=${user.id}" class="edits"><i class="fa-solid fa-pen"></i></a>
                 <button class="deletebutton" data-id="${user.id}"><i class="fa-solid fa-trash"></i></button>
             </td>
         `;

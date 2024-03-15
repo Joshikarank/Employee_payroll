@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "json": "^11.0.0",
+    "json-server": "^1.0.0-alpha.23",
+    "server": "^1.0.38"
+  },
+  "name": "employee_payroll_javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch ./database/employee.json",
+    "debug": "node --inspect data.js"
+ 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
