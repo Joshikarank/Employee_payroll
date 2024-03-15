@@ -1,116 +1,194 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.bgc {
+    background-color:#E3E3E3;
+    width: 100vw;
+    height: 90vh;
 }
-.header {
-    padding: 30px 50px 50px;
+.top-box{
+    background-color: white;
+    width: 100%;
+    height: 15%;
     display: flex;
-    background-color: #eeeeee;
+    padding-left: 10%; 
+
+}
+ 
+.header{
+    padding: 10px 10px 10px;
+    display: flex;
 }
 .header1 {
-    color: #16860e;
+    color: #82A70C;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+.profileicon{
+    width: 3%;
 }
-
-.additem{
-    color: #111212;
-    padding-top:0cqh;
-}
-
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.employee-table {
+.middle-box{
     width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    height: 20%;
+    padding: 1%;
+    display: flex;
+    padding-top: 3%;
 }
 
-.employee-table th,
-.employee-table td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+.middle-box1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+.emp{
+    padding-right: 58%;
+    color: #42515F;
+    font-size: 100x;
+}
+.icon{
+    width: 4%;
+    height: 5%;
+    padding: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+.user {
+    background-color: #82A70C;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: start;
+    height: 10  0%;
+    border-radius: 6px;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.middle-main{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    border: 1px solid #E3E3E3;
+
+}
+.middle-main1{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-color: #404448;
+    color: white;
 }
 
-.employee-table th {
-    background-color: #494973;
-    color: #ffffff;
+.table {
+    width: 50%;
+    height: 100%;
+    margin: 10 auto;
+    overflow: auto;
 }
 
-.employee-table tr:hover {
-    background-color: #f5f5f5;
+.table1 {
+    color: white;
+    background-color: #2c2c50;
+}
+.names1{
+    padding-left: 0%;
+}
+.names{
+    padding-left: 2%;
+}
+.details{
+    padding-left: 4%;
+}
+.sal {
+    padding-left: 7%;
+}
+.date {
+    padding-left: 11%;
+}
+.details1{
+    padding-left: 11.5%;
+}
+.action {
+    padding-left: 12%;
+}
+.dept {
+    padding-left: 11%;
+}
+.button{
+    background-color: #E9FEA5;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    height: 19px;
+    width: 70px;
+    border-radius: 19px;
+    padding: 5px;
 }
 
-.employee-table td {
-    color: #333;
+.button1{
+    background-color: #E9FEA5;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    height: 19px;
+    width: 40px;
+    border-radius: 19px;
+    padding: 5px;
 }
 
-.employee-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+.button2{
+    background-color: #E9FEA5;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    height: 19px;
+    width: 50px;
+    border-radius: 19px;
+    padding: 5px;
 }
 
-/* Actions styles */
-.employee-table .actions {
-    padding: 10px;
-    text-align: center;
+.delete:hover {
+    background-color: #000000;
 }
 
-.employee-table .actions a {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #007bff;
-    padding: 5px 10px;
-    margin-right: 8px;
-    border-radius: 5px;
+.image {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+.table-name {
+    padding-left: 50px;
+    padding-right: 0px;
+}
+.table-gender {
+    padding-left: 50px;
+    padding-right: 150px;
+}
+#table-sales {
+    padding-left: 0px;
+    padding-right: 100px;
+}
+#table-salary{
+    padding-left: 0px;
+    padding-right: 110px;
+}
+#table-date {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+#actions{
+    padding-left: 50px;
 }
 
-.employee-table .actions
- a.delete {
-    background-color: #dc3545;
+.edits{
+    margin-right: 20px;
+    background: transparent;
+    border: transparent;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .employee-table, .employee-table th, .employee-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .employee-table th, .employee-table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    .employee-table th::before, .employee-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
+.deletebutton{
+    background: transparent;
+    border: transparent;
 }

@@ -3,6 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EMPLOYEE PAYROLL</title>
     <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>  
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -18,25 +21,27 @@
     <div class="main">
     <div class="emp">
         <h3 id="heading">Employee Payroll Form</h3><br>
+        <form id="employeeForm">
         <label id="username">Name</label>
             <input type="text" id="name"><br>
                 <span id="nameError" style="color:red;"></span>
         <br>
         <label id="pi" class="profile">Profile image</label>
-        <input type="radio" name="profile" id="profile1" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4sKLKw2NRQTZgWlMgy6ZlBrY9TTTr1zMObLZeV73vQ&s">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4sKLKw2NRQTZgWlMgy6ZlBrY9TTTr1zMObLZeV73vQ&s" alt="women_img_1" width="40px" style="clip-path: circle();">
-        <input type="radio" name="profile" id="profile2" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaVKbSa1QadC1GsXFwQML4kK6JxihiQ4_2n602HKUnQ&s">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaVKbSa1QadC1GsXFwQML4kK6JxihiQ4_2n602HKUnQ&s" alt="men_image_1" width="40px" style="clip-path: circle();">
-        <input type="radio" name="profile" id="profile3" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJIVAovygeD6z08kn_Rl4fY9vKjJ_Re8ExMeoNZ6yQQ&s">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJIVAovygeD6z08kn_Rl4fY9vKjJ_Re8ExMeoNZ6yQQ&s" alt="women_img_2" width="40px" style="clip-path: circle();">
-        <input type="radio"  name="profile" id="profile4" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnKAIHy-tNtoCdJDhEBAlvt5JDSpIkTfZbHKxuT8-6g&s">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnKAIHy-tNtoCdJDhEBAlvt5JDSpIkTfZbHKxuT8-6g&s" alt="men_img_2" width="40px" style="clip-path: circle();"><br>
+        <input type="radio" name="profile" id="profile1" value="https://i.ibb.co/C0JRMVm/CJ.jpg"">
+        <img src="https://i.ibb.co/C0JRMVm/CJ.jpg"" alt="women_img_1" width="40px" style="clip-path: circle();">
+        <input type="radio" name="profile" id="profile2" value="https://i.ibb.co/1dFhnfn/frog.png" >
+        <img src="https://i.ibb.co/1dFhnfn/frog.png" alt="frog" border="0" alt="men_image_1" width="40px" style="clip-path: circle();">
+        <input type="radio" name="profile" id="profile3" value="https://i.ibb.co/w7VRTHp/mouse.jpg">
+        <img src="https://i.ibb.co/w7VRTHp/mouse.jpg" alt="women_img_2" width="40px" style="clip-path: circle();">
+        <input type="radio"  name="profile" id="profile4" value="https://i.ibb.co/qjWTtHC/mike.jpg">
+        <img src="https://i.ibb.co/qjWTtHC/mike.jpg" alt="men_img_2" width="40px" style="clip-path: circle();"><br>
         <br>
         <label for="male" class="gender">Gender</label>
         <input type="radio" name="gender" id="male" value="male">Male
         <label for="male" class="gender"></label>
         <input type="radio" name="gender" id="female" value="female">Female <br>
         <br>
+        <div class="form-check">
         <label for="dept" class="dept">Department</label>
         <input type="checkbox" id="HR" name="dept">HR
         <input type="checkbox" id="Sales" name="dept">Sales
@@ -44,6 +49,7 @@
         <input type="checkbox" id="Engineer" name="dept">Engineer
         <input type="checkbox" id="Others" name="dept">Others<br>
         <br>
+        </div>
         <label for="salary" class="salary">Salary</label>
         <select name="salary" id="salary">Select
             <option>Select Salary</option>
@@ -62,10 +68,11 @@
         <br>
         <label id="actions"></label>
         <div class="buttons">
-        <input type="button" onclick="window.location.href='dashboard.html'" id="cancel">Cancel</input>
-        <button id="submit" type="submit" >Submit</button>
-        <input type="button" value="Reset" id="reset">
+        <button onclick="window.location.href='dashboard.html'" id="cancel" class="btn btn-danger">Cancel</button>
+        <button onclick="window.location.href='dashboard.html'" id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <input  type="button" class="btn btn-warning" value="Reset" id="resetButton">
         </div>
+    </form>
     </div>
     </div>
     <script src="scripts/register.js"></script> 

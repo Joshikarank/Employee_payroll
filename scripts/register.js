@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#submit').on('click', function() {
         var deptArray = [];
         var name = $('#name').val();
-        var selectedProfile = $('input[name="profile"]:checked').val();
+        var selectedProfile = $('input[name="profile"]:checked').val(); 
         var sal = $('#salary').val();
         var genderValue = $('input[name="gender"]:checked').val();
         var checkedBoxes = $('input[name="dept"]:checked');
@@ -26,15 +26,10 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/user',
+            url: 'http://localhost:3000/users',
             data: JSON.stringify(datasobject),
             contentType: 'application/json',
-            success: function(response) {
-                console.log('Data successfully stored on server:', response);
-            },
-            error: function(xhr, status, error) {
-                console.error('Error storing data:', error);
-            }
+
         });
     });
 
@@ -48,5 +43,11 @@ $(document).ready(function() {
         } else {
             nameError.text('');
         }
+    
+    
     });
+});
+
+document.getElementById('resetButton').addEventListener('click', function() {
+    document.getElementById('employeeForm').reset();
 });
