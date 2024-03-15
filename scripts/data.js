@@ -17,23 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
     function createRow(user) {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${user.id}</td>
             <td><img src="${user.profile}" alt="Profile" width="50"></td>
             <td>${user.username}</td>
             <td>${user.salary}</td>
             <td>${user.gender}</td>
-            <td>${user.department.join(', ')}</td>
+            <td class="department">${user.department.join("  ")}</td>            
             <td>${user.date}</td>
             <td>${user.notes}</td>
             <td>
-                <a href="register.html?id=${user.id}" class="edits"><i class="fa-solid fa-pen"></i></a>
-                <button class="deletebutton" data-id="${user.id}"><i class="fa-solid fa-trash"></i></button>
+                <a href="register.html?id=${user.id}" class="edits" title="edit this user"><i class="fa-solid fa-pen"></i></a>
+                <button class="deletebutton" data-id="${user.id}" title="delete this user"><i class="fa-solid fa-trash"></i></button>
             </td>
         `;
         return row;
     }
 
     fetchUsers();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('id');
+    // Update the submit button text if the page is in edit mode
+    if (userId) {
+        $('#submit').text('Update');
+    }
 
     $(document).ready(function() {
         $('#userData').on('click', '.deletebutton', function() {
@@ -61,5 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+        
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#userData tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
     });
 });

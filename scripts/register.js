@@ -24,7 +24,6 @@ $(document).ready(function() {
     $('#employeeForm').submit(function(e) {
         e.preventDefault();
         const formData = {
-            // Collect form data
             username: $('#name').val(),
             profile: $('input[name="profile"]:checked').val(),
             gender: $('input[name="gender"]:checked').val(),
@@ -50,5 +49,29 @@ $(document).ready(function() {
                 console.error('Error saving user:', xhr.responseText);
             }
         });
-    });
+        
+        });
+    
 });
+
+function validateDept() {
+    var checkboxes = document.getElementsByName('dept');
+    var checked = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checked = true;
+            break;
+        }
+    }
+    var deptError = document.getElementById('deptError');
+    if (!checked) {
+        deptError.textContent = 'Please select at least one department.';
+    } else {
+        deptError.textContent = '';
+    }
+}
+const resetButton = document.getElementById('resetButton');
+    const employeeForm = document.getElementById('employeeForm');
+    resetButton.addEventListener('click', function() {
+        employeeForm.reset();
+    });

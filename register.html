@@ -23,7 +23,7 @@
         <h3 id="heading">Employee Payroll Form</h3><br>
         <form id="employeeForm">
         <label id="username">Name</label>
-            <input type="text" id="name"><br>
+            <input type="text" id="name" required><br>
                 <span id="nameError" style="color:red;"></span>
         <br>
         <label id="pi" class="profile">Profile image</label>
@@ -53,10 +53,10 @@
         <label for="salary" class="salary">Salary</label>
         <select name="salary" id="salary">Select
             <option>Select Salary</option>
-            <option value="30k">30k</option>
-            <option value="40k">40k</option>
-            <option value="50k">50k</option>
-            <option value="60k">60k</option>
+            <option value="₹30,000">₹30,000</option>
+            <option value="₹40,000">₹40,000</option>
+            <option value="₹50,000">₹50,000</option>
+            <option value="₹60,000">₹60,000</option>
         </select><br>
         <br>
         <label for="date" class="date">Start Date</label>
@@ -69,12 +69,14 @@
         <label id="actions"></label>
         <div class="buttons">
         <button onclick="window.location.href='dashboard.html'" id="cancel" class="btn btn-danger">Cancel</button>
-        <button onclick="window.location.href='dashboard.html'" id="submit" type="submit" class="btn btn-primary">Submit</button>
+            <button onclick="window.location.href='dashboard.html'" id="submit" type="submit" class="btn btn-primary">Submit</button>
         <input  type="button" class="btn btn-warning" value="Reset" id="resetButton">
         </div>
     </form>
     </div>
     </div>
-    <script src="scripts/register.js"></script> 
+    <script src="scripts/register.js"></script>
+    <script src="scripts/data.js"></script>
+
     </body>
     </html> 

@@ -191,4 +191,17 @@
 .deletebutton{
     background: transparent;
     border: transparent;
+    color: rgb(255, 21, 0);
 }
+
+.deletebutton:hover{
+    color: #653a3a;
+}
+
+.department {
+    display: inline-block;
+    background-color: rgb(204, 240, 153);
+    border-radius: 90%;
+    text-align: center;
+}
+
