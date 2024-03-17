@@ -1,67 +1,29 @@
 {
   "users": [
     {
-      "username": "Joshi karan.k",
-      "profile": "https://i.ibb.co/C0JRMVm/CJ.jpg",
-      "gender": "male",
-      "department": [
-        "HR",
-        "Engineer"
-      ],
-      "salary": "₹30,000",
-      "date": "2024-02-21",
-      "notes": "notes for the note to take the notes for notesss column",
-      "id": "fa13"
-    },
-    {
-      "username": "Joshifelix",
-      "profile": "https://i.ibb.co/qjWTtHC/mike.jpg",
-      "gender": "male",
-      "department": [
-        "HR",
-        "Engineer"
-      ],
-      "salary": "₹60,000",
-      "date": "2024-03-04",
-      "notes": "regular niggfff",
-      "id": "c9ee"
-    },
-    {
-      "username": "Carl Johnson",
-      "profile": "https://i.ibb.co/C0JRMVm/CJ.jpg",
-      "gender": "male",
-      "department": [
-        "Others"
-      ],
-      "salary": "₹50,000",
-      "date": "2024-03-04",
-      "notes": "Carl!!?",
-      "id": "921f"
-    },
-    {
-      "id": "430b",
-      "username": "Felix",
-      "profile": "https://i.ibb.co/w7VRTHp/mouse.jpg",
-      "gender": "male",
-      "department": [
-        "HR",
-        "Engineer"
-      ],
-      "salary": "₹50,000",
-      "date": "2024-03-11",
-      "notes": "dog"
-    },
-    {
-      "username": "Deepak",
-      "profile": "https://i.ibb.co/qjWTtHC/mike.jpg",
+      "id": "88d2",
+      "username": "Joshi",
+      "profile": "https://i.ibb.co/1dFhnfn/frog.png",
       "gender": "male",
       "department": [
         "HR"
       ],
       "salary": "₹60,000",
-      "date": "2024-03-04",
-      "notes": "hello",
-      "id": "b0e1"
+      "date": "2024-03-18",
+      "notes": "dwdw"
+    },
+    {
+      "username": "Joshikaran",
+      "profile": "https://i.ibb.co/qjWTtHC/mike.jpg",
+      "gender": "male",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "salary": "₹50,000",
+      "date": "2024-03-18",
+      "notes": "dfee",
+      "id": "cded"
     }
   ]
 }

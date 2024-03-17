@@ -36,9 +36,9 @@
     display: flex;
 }
 .emp{
-    padding-right: 58%;
+    padding-right: 47%;
     color: #42515F;
-    font-size: 100x;
+    font-size: 30px;
 }
 .icon{
     width: 4%;
@@ -200,8 +200,36 @@
 
 .department {
     display: inline-block;
-    background-color: rgb(204, 240, 153);
-    border-radius: 90%;
-    text-align: center;
+    background-color: yellowgreen;
+    border-radius: 15px;
+    padding: 10px 20px;
 }
 
+
+
+
+
+
+
+.search-container {
+    margin-bottom: 20px; 
+  }
+  
+  #searchInput {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #01a2b0; 
+    border-radius: 50px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+  }
+  
+  #searchInput::placeholder {
+    color: #aaa; 
+  }
+  
+  #searchInput:focus {
+    outline: none; 
+    border-color: #007bff;
+  }
+  
