@@ -1,16 +1,17 @@
 {
   "users": [
     {
-      "id": "88d2",
       "username": "Joshi",
       "profile": "https://i.ibb.co/1dFhnfn/frog.png",
       "gender": "male",
       "department": [
-        "HR"
+        "HR",
+        "Engineer"
       ],
       "salary": "₹60,000",
       "date": "2024-03-18",
-      "notes": "dwdw"
+      "notes": "dwdw",
+      "id": "88d2"
     },
     {
       "username": "Joshikaran",
@@ -22,7 +23,7 @@
       ],
       "salary": "₹50,000",
       "date": "2024-03-18",
-      "notes": "dfee",
+      "notes": "Sample notes",
       "id": "cded"
     }
   ]
