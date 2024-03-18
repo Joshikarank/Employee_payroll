@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching data:', error));
     }
 
+    
+
     function createRow(user) {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${user.username}</td>
             <td>${user.salary}</td>
             <td>${user.gender}</td>
-            <td class="department">${user.department.join("  ")}</td>            
+            <td class="dept">${createdeptelement(user.department)}</td>            
             <td>${user.date}</td>
             <td>${user.notes}</td>
             <td>
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (userId) {
         $('#submit').text('Update');
     }
-
+    
     $(document).ready(function() {
         $('#userData').on('click', '.deletebutton', function() {
             const idToDelete = $(this).data('id');
@@ -76,3 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+function createdeptelement(department) {
+    return department.map(de => `<span class="dt">${de}</span>`).join(' ');
+}
