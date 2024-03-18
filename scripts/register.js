@@ -13,7 +13,7 @@ $(document).ready(function() {
         $('#date').val(user.date);
         $('#notes').val(user.notes);
     }
-
+2
     if (userId) {
         fetch(`http://localhost:3000/users/${userId}`)
             .then(response => response.json())
@@ -53,6 +53,18 @@ $(document).ready(function() {
         });
     
 });
+
+function validateName() {
+    var nameInput = document.getElementById('name');
+    var nameError = document.getElementById('nameError');
+    var regex = /^.{3,}$/;
+
+    if (!regex.test(nameInput.value)) {
+        nameError.textContent = 'Please enter a valid username';
+    } else {
+        nameError.textContent = '';
+    }
+}
 
 function validateDept() {
     var checkboxes = document.getElementsByName('dept');

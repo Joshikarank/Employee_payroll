@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "username": "Joshi",
-      "profile": "https://i.ibb.co/1dFhnfn/frog.png",
+      "username": "Joshikarank",
+      "profile": "https://i.ibb.co/C0JRMVm/CJ.jpg",
       "gender": "male",
       "department": [
         "HR",
@@ -25,6 +25,19 @@
       "date": "2024-03-18",
       "notes": "Sample notes",
       "id": "cded"
+    },
+    {
+      "id": "1356",
+      "username": "egge",
+      "profile": "https://i.ibb.co/1dFhnfn/frog.png",
+      "gender": "male",
+      "department": [
+        "HR",
+        "Sales"
+      ],
+      "salary": "₹40,000",
+      "date": "2024-03-07",
+      "notes": "grgr"
     }
   ]
 }

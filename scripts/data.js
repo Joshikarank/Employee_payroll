@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get('id');
-    // Update the submit button text if the page is in edit mode
+    
     if (userId) {
         $('#submit').text('Update');
     }

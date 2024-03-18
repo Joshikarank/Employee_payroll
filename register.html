@@ -23,8 +23,8 @@
         <h3 id="heading">Employee Payroll Form</h3><br>
         <form id="employeeForm">
         <label id="username">Name</label>
-            <input type="text" id="name" required><br>
-                <span id="nameError" style="color:red;"></span>
+        <input type="text" id="name" oninput="validateName()" required><br>
+        <span id="nameError" style="color:red;"></span>
         <br>
         <label id="pi" class="profile">Profile image</label>
         <input type="radio" name="profile" id="profile1" value="https://i.ibb.co/C0JRMVm/CJ.jpg"">
